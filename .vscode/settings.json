@@ -1,0 +1,39 @@
+{
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "cSpell.words": [
+    "appconfigdata",
+    "backoffice",
+    "camelcase",
+    "clsx",
+    "commitlint",
+    "corepack",
+    "cssmodule",
+    "DEEPBLOK",
+    "fontsource",
+    "hookform",
+    "icrm",
+    "kycs",
+    "libphonenumber",
+    "mkcert",
+    "nextjs",
+    "notistack",
+    "noto",
+    "nrwl",
+    "pnpx",
+    "progressbar",
+    "runhttps",
+    "svgr",
+    "tanstack"
+  ],
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    "*.yml",
+    "*.sh*"
+  ]
+}

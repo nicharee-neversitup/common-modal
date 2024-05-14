@@ -1,0 +1,11 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+.btn {
+  @apply cursor-pointer rounded-xl border-none text-white transition-all duration-300 ease-out;
+}
