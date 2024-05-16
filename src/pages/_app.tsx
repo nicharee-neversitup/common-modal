@@ -22,9 +22,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   return (
     <>
-      <ThemeContext.Provider value={'dark'}>
-        {getLayout(<Component {...pageProps} />)}
-      </ThemeContext.Provider>
+      <ThemeContext.Provider value={'light'}>{getLayout(<Component {...pageProps} />)}</ThemeContext.Provider>
     </>
   )
 }
