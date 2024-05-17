@@ -1,2 +1,2 @@
 export { default as CommonExampleNavigation } from './CommonExampleNavigation'
-export { default as CommonPagination } from './CommonPagination'
+export { default as CommonModal } from './CommonModal'
