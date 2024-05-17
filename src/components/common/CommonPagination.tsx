@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react'
 import styled from '@emotion/styled'
-import { ConfigProvider, Pagination, PaginationProps, ThemeConfig } from 'antd'
+import { ConfigProvider, Pagination, PaginationProps } from 'antd'
 import { PaginationLocale } from 'antd/es/pagination/Pagination'
 import { ComponentToken } from 'antd/es/pagination/style'
 import { AliasToken } from 'antd/es/theme/internal'
