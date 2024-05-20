@@ -2,8 +2,8 @@ import { ReactElement, useContext, useState } from 'react'
 import { ThemeContext } from '@/providers/theme-context'
 import type { NextPageWithLayout } from '@/pages/_app'
 import styled from '@emotion/styled'
-import { CommonModal } from '@/components/common'
 import { Button } from 'antd'
+import { CommonModal } from '@/components/common'
 
 const ExampleModal: NextPageWithLayout = () => {
   const theme = useContext(ThemeContext)
@@ -26,19 +26,7 @@ const ExampleModal: NextPageWithLayout = () => {
       <Button type="primary" onClick={showModal}>
         Open Modal
       </Button>
-      <CommonModal
-        title="Common Modal"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        centered
-        locale={{
-          customText: { cancelText: 'ยกเลิก', okText: 'รับทราบ' },
-        }}
-        classNames={{
-          footer: 'w-full flex items-center justify-center space-x-2',
-        }}
-        wrapClassName="">
+      <CommonModal title="Common Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <div
           role="status"
           className="max-w-md animate-pulse space-y-4 divide-y divide-gray-200 rounded border border-gray-200 p-4 shadow dark:divide-gray-700 dark:border-gray-700 md:p-6">

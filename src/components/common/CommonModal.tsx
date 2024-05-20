@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { ConfigProvider, Modal } from 'antd'
 import { ModalLocale, ModalProps } from 'antd/es/modal'
 import { ComponentToken } from 'antd/es/modal/style'
@@ -15,17 +15,9 @@ interface ILocaleTextConfig {
   customText: Partial<ModalLocale>
 }
 
-interface IClassNameModal {
-  mask: HTMLAttributes<HTMLDivElement>['className']
-  header: HTMLAttributes<HTMLDivElement>['className']
-  body: HTMLAttributes<HTMLDivElement>['className']
-  footer: HTMLAttributes<HTMLDivElement>['className']
-}
-
 interface ICommonModalProps extends ModalProps {
   theme: Partial<ICommonModalThemeConfig>
   locale: Partial<ILocaleTextConfig>
-  classNames: Partial<IClassNameModal>
   prefixCls: string
 }
 
@@ -35,8 +27,12 @@ const localeCustomTextDefault: ModalLocale = {
   justOkText: 'ตกลง',
 }
 
+const modalClassNameDefault: ModalProps['classNames'] = {
+  footer: 'w-full flex items-center justify-center space-x-2',
+}
+
 const CommonModal = (props: Partial<ICommonModalProps>) => {
-  const { theme, locale, prefixCls, ...prop } = props
+  const { theme, locale, prefixCls, classNames, ...prop } = props
 
   const localeConfigProvider: Locale = useMemo(() => {
     if (locale) {
@@ -66,7 +62,7 @@ const CommonModal = (props: Partial<ICommonModalProps>) => {
       }
       locale={localeConfigProvider}
       prefixCls={prefixCls}>
-      <Modal {...prop} />
+      <Modal classNames={classNames || modalClassNameDefault} {...prop} />
     </ConfigProvider>
   )
 }
